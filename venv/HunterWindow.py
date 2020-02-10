@@ -64,13 +64,30 @@ class HunterScreen(HunterWindow):
     def Hunter_menu(self):
         pass
 
+    # 彩蛋：致敬全国抗疫一线工作者
     def EG_giveThanks(self):
         print("EG_giveThanks已被触发")
+        # 颜色
+        white = (255, 255, 255)
+        # 输出文字
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "今天是2020年2月11日，新型冠状病毒在中国", white, (0, 0))
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "已经爆发三个月了，现有确诊人数40261例，治愈", white, (0, 30))
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "3494例，死亡909例。包括我在内的绝大多数北京", white, (0, 60))
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "人都在家中等待疫情过去，但那些一线的医生、护", white, (0, 90))
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "士、科学家却仍在最危险的地区治疗病人，照顾病", white, (0, 120))
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "人，为世界对病毒的抗争做出卓越的贡献。在此，", white, (0, 150))
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "我向这些英雄，致以崇高的敬意。————PekingMan", white, (0, 180))
+
+    # 绘制一个覆盖全屏的颜色方块，相当于刷新屏幕
+    def BlackRect(self, color):
+        pygame.draw.rect(self.screen, color, (0, 0, 800, 500), 0)
+        pygame.display.update()
 
 
 class HunterTools(HunterWindow):
+    # 该函数用于放置可调节透明度图片
     def transparent_blit(self, surface, image, position, alphaValue):
-        # 设置图片坐标
+        # 图片坐标
         positionX = position[0]
         positionY = position[1]
         # 创建tempScreen(临时屏幕)后，利用之进行透明度图片放置
@@ -79,4 +96,14 @@ class HunterTools(HunterWindow):
         tempScreen.blit(image, (0, 0))
         tempScreen.set_alpha(alphaValue)
         surface.blit(tempScreen, (positionX, positionY))
+        pygame.display.update()
+
+    # 在屏幕上打印文本
+    def textPrint(self, font, size, text, color, position):
+        # 确定文字字体与大小
+        myFont = pygame.font.Font(font, size)
+        # 确定文本内容和颜色
+        myText = myFont.render(text, True, color)
+        # 根据位置输出文本（position[0]为x坐标，position[1]为y坐标）
+        HunterScreen.screen.blit(myText, (position[0], position[1]))
         pygame.display.update()

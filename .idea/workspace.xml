@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c8f910c9-1ec3-4df0-9841-d5518e5a7b9b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Hunter.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Hunter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/HunterController.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/HunterController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/HunterWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/HunterWindow.py" afterDir="false" />
     </list>
@@ -129,7 +128,19 @@
       <option name="presentableId" value="Default" />
       <updated>1579164730586</updated>
     </task>
+    <task id="LOCAL-00001" summary="完善逻辑">
+      <created>1581356108757</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581356108757</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完善逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善逻辑" />
   </component>
   <component name="WindowStateProjectService">
     <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1581356107561">
@@ -140,22 +151,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579527273290" />
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1581356151702">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1581360055407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581356151702" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1581356151701">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581360055407" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1581360055407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581356151701" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1581356151701">
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581360055407" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1581360055407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581356151701" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1581356151701">
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581360055407" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1581360055407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581356151701" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581360055407" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1579261667056">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -180,9 +191,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581353876198" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1580012096493">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1581359953804">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1580012096493" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581359953804" />
   </component>
 </project>
