@@ -1,17 +1,13 @@
 # Creat by PekingMan on 2020/1/16
-# 该程序是对窗口的控制程序
-# 该程序包括：
+# 该程序是对窗口的控制程序，程序的运行逻辑可在HunterController.py中查看
+# 该程序包括：工具（HunterTools）和显示（HunterScreen）
 # 工具：transparent_blit，是透明度放置工具
 # 显示：Hunter_start，在窗口上显示logo
 
 import pygame
-from HunterController import HunterController
 
 # 初始化pygame
 pygame.init()
-
-# 插入类
-HunterController = HunterController()
 
 
 class HunterWindow:
@@ -66,10 +62,10 @@ class HunterScreen(HunterWindow):
         print("淡出结束")
 
     def Hunter_menu(self):
-        print("主菜单界面")
-        # EG：Give Thanks
-        if HunterController.EGVerify_giveThanks == True:
-            print("EG_giveThanks被触发")
+        pass
+
+    def EG_giveThanks(self):
+        print("EG_giveThanks已被触发")
 
 
 class HunterTools(HunterWindow):

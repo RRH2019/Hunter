@@ -1,4 +1,5 @@
 # Creat by PekingMan on 2020/1/16
+# 主程序
 
 import HunterWindow
 import HunterController
