@@ -2,7 +2,9 @@
 # 该程序是对窗口的控制程序，程序的运行逻辑可在HunterController.py中查看
 # 该程序包括：工具（HunterTools）和显示（HunterScreen）
 # 工具：transparent_blit，是透明度放置工具
+#      textPrint，在窗口上显示文字
 # 显示：Hunter_start，在窗口上显示logo
+#      EG_giveThanks，在窗口上显示彩蛋文字
 
 import pygame
 
@@ -51,9 +53,9 @@ class HunterScreen(HunterWindow):
             print("startLogo Transparent =", transparentValue)  # 输出startLogo的透明度
             print("startTitle Transparent =", transparentValue)  # 输出startTitle的透明度
             HunterTools.transparent_blit(self, self.screen, startLogo, (240, 130),
-                                  transparentValue)  # 将startLogo放置在(240, 130)，透明度为transparentValue
+                                         transparentValue)  # 将startLogo放置在(240, 130)，透明度为transparentValue
             HunterTools.transparent_blit(self, self.screen, startTitle, (170, 300),
-                                  transparentValue)  # 将startTitle放置在(170, 300)，透明度为transparnetValue
+                                         transparentValue)  # 将startTitle放置在(170, 300)，透明度为transparnetValue
             # 绘制一个黑色矩形，覆盖startLogo和startTitle
             # 矩形坐标：(170, 100)， 矩形大小：500*300
             pygame.draw.rect(self.screen, (0, 0, 0), (170, 100, 500, 300), 0)
@@ -62,7 +64,12 @@ class HunterScreen(HunterWindow):
         print("淡出结束")
 
     def Hunter_menu(self):
-        pass
+        print("菜单栏")
+        # 颜色
+        white = (255, 255, 255)
+        # 在屏幕上打印文字START
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 70, "START", white, (320, 400))
+        pygame.display.update()
 
     # 彩蛋：致敬全国抗疫一线工作者
     def EG_giveThanks(self):
@@ -71,17 +78,12 @@ class HunterScreen(HunterWindow):
         white = (255, 255, 255)
         # 输出文字
         HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "今天是2020年2月11日，新型冠状病毒在中国", white, (0, 0))
-        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "已经爆发三个月了，现有确诊人数40261例，治愈", white, (0, 30))
-        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "3494例，死亡909例。包括我在内的绝大多数北京", white, (0, 60))
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "已经爆发三个月了，现有确诊人数40261例，治愈", white,(0, 30))
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "3494例，死亡909例。包括我在内的绝大多数北京", white,(0, 60))
         HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "人都在家中等待疫情过去，但那些一线的医生、护", white, (0, 90))
-        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "士、科学家却仍在最危险的地区治疗病人，照顾病", white, (0, 120))
-        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "人，为世界对病毒的抗争做出卓越的贡献。在此，", white, (0, 150))
-        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "我向这些英雄，致以崇高的敬意。————PekingMan", white, (0, 180))
-
-    # 绘制一个覆盖全屏的颜色方块，相当于刷新屏幕
-    def BlackRect(self, color):
-        pygame.draw.rect(self.screen, color, (0, 0, 800, 500), 0)
-        pygame.display.update()
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "士、科学家却仍在最危险的地区治疗病人，照顾病", white,(0, 120))
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "人，为世界对病毒的抗争做出卓越的贡献。在此，", white,(0, 150))
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 30, "我向这些英雄，致以崇高的敬意。————PekingMan", white,(0, 180))
 
 
 class HunterTools(HunterWindow):
@@ -106,4 +108,9 @@ class HunterTools(HunterWindow):
         myText = myFont.render(text, True, color)
         # 根据位置输出文本（position[0]为x坐标，position[1]为y坐标）
         HunterScreen.screen.blit(myText, (position[0], position[1]))
+        pygame.display.update()
+
+    # 绘制一个覆盖全屏的颜色方块，相当于刷新屏幕
+    def BlackRect(self, color):
+        pygame.draw.rect(HunterScreen.screen, color, (0, 0, 800, 500), 0)
         pygame.display.update()

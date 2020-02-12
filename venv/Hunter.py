@@ -9,6 +9,8 @@ if "__main__" == __name__:
     HunterWindow = HunterWindow.HunterScreen()
     HunterController = HunterController.HunterController()
     # 正式运行
-    HunterWindow.Hunter_start()  # 屏幕设置和开始界面
+    # screen设置和开始界面显示
+    HunterWindow.Hunter_start()
     HunterWindow.Hunter_menu()
-    HunterController.while_loop()  # while循环检测
+    # 程序逻辑控制，具体显示内容可在函数while_loop中查看
+    HunterController.while_loop()
