@@ -71,6 +71,20 @@ class HunterScreen(HunterWindow):
         HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 70, "START", white, (320, 400))
         pygame.display.update()
 
+    # 鼠标移到菜单中start上方字体变大
+    def Hunter_menu_biggerText_bigger(self):
+        pygame.draw.rect(self.screen, (0, 0, 0), (0, 400, 800, 100), 0)
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 80, "START", (255, 255, 255), (310, 395))
+        pygame.display.update()
+
+    # 鼠标离开start后字体恢复原样
+    def Hunter_menu_biggerText_smaller(self):
+        pygame.draw.rect(self.screen, (0, 0, 0), (0, 400, 800, 100), 0)
+        HunterTools.textPrint(HunterTools, r"C:\Windows\Fonts\simhei.ttf", 70, "START", (255, 255, 255), (320, 400))
+        pygame.display.update()
+
+
+
     # 彩蛋：致敬全国抗疫一线工作者
     def EG_giveThanks(self):
         print("EG_giveThanks已被触发")

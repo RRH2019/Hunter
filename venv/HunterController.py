@@ -16,6 +16,20 @@ class HunterController:
         if event.type == pygame.QUIT:
             sys.exit()
 
+    def Hunter_menu_biggerText(self, event):
+        # 获取鼠标位置
+        mousePos = pygame.mouse.get_pos()
+        mousePos_x = mousePos[0]
+        mousePos_y = mousePos[1]
+        # 当鼠标移动到start上方时
+        if 320 <= mousePos_x <= 495 and 400 <= mousePos_y <= 470:
+            HunterScreen.Hunter_menu_biggerText_bigger(HunterScreen)
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                print("按下start")
+        # 当鼠标离开start时
+        else:
+            HunterScreen.Hunter_menu_biggerText_smaller(HunterScreen)
+
     # 彩蛋：向全国一线防疫人员致敬
     def EG_giveThanks(self):
         key = pygame.key.get_pressed()
@@ -34,11 +48,3 @@ class HunterController:
             print("EG_giveThanks已关闭")
             # 显示menu界面
             HunterScreen.Hunter_menu(HunterScreen)
-
-    def while_loop(self):
-        while True:
-            for event in pygame.event.get():
-                # 当点击关闭按钮时退出游戏
-                self.exit(event)
-                # EG_giveThanks检测及触发
-                self.EG_giveThanks()
